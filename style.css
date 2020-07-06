@@ -1,0 +1,83 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #a6001a, #eb6602);
+}
+.calculator-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    align-content: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+.calculator-grid > button{
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #fff;
+    font-size: 2em;
+    background-color: rgba(255, 255, 255, .75);
+    transition: .3s;
+}
+.calculator-grid > button:hover{
+    background-color: rgba(255, 255, 255, .9);
+}
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: end;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, .75);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.previous-operand{
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, .75);
+    grid-column: 2;
+}
+.current-operand{
+    font-size: 2.5em;
+    color: #fff;
+    grid-column: 2;
+}
+#date{
+    background: rgba(255, 255, 255, .75);
+    color: rgba(0, 0, 0, .75);
+    font-size: 0.9em;
+    padding: 5px;
+    cursor: default;
+    justify-self: start;
+    align-self: start;
+}
+@media only screen and  (max-width: 700px) {
+	.calculator-grid{
+		grid-template-columns: repeat(4, 70px);
+		grid-template-rows: minmax(100px, auto) repeat(5, 70px);
+	}
+	.calculator-grid > button{
+		font-size: 1.5em;
+	}
+	.output{
+		padding: 10px;
+	}
+	.previous-operand{
+		font-size: 1em;
+	}
+	.current-operand{
+		font-size: 2em;
+	}
+	#date{
+		font-size: 0.8em;
+	}
+}
