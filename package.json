@@ -1,0 +1,24 @@
+{
+  "name": "calculator-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "babel main.js --out-file dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rustydcoder/Calculator-class-Js.git"
+  },
+  "author": "Rustydcoder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rustydcoder/Calculator-class-Js/issues"
+  },
+  "homepage": "https://github.com/rustydcoder/Calculator-class-Js#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0"
+  }
+}
